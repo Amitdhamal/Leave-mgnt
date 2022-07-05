@@ -1,0 +1,63 @@
+<div class="container col-sm-6 mt-5 card">
+    <div class="card-body">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="user-selection" id="user-hod" value="1" (click)="getform(1)" checked>
+            <label class="form-check-label" for="user-hod">HOD</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="user-selection" id="user-staff" value="2" (click)="getform(2)">
+            <label class="form-check-label" for="user-staff">Staff</label>
+        </div>
+        <form  *ngIf="selectedForm == 1">
+            <div class="hod-form">
+                <div class="form-group">
+                    <label for="hod-name">Name</label>
+                    <input type="email" class="form-control" id="hod-name" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="hod-username">Username</label>
+                    <input type="email" class="form-control" id="hod-username" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="hod-department">Department</label>
+                    <input type="email" class="form-control" id="hod-department" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="hod-email">Email address</label>
+                    <input type="email" class="form-control" id="hod-email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="hod-password">Password</label>
+                    <input type="password" class="form-control" id="hod-password">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <form  *ngIf="selectedForm == 2">
+            <div class="staff-form">
+                <div class="form-group">
+                    <label for="staff-name">Name</label>
+                    <input type="email" class="form-control" id="staff-name" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="staff-username">Username</label>
+                    <input type="email" class="form-control" id="staff-username" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="staff-email">Email address</label>
+                    <input type="email" class="form-control" id="staff-email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="staff-password">Password</label>
+                    <input type="password" class="form-control" id="staff-password">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div>
+            registered User ? <button type="button" class="btn btn-link pt-0" (click)="navigateToSignIn()">sign-In</button>
+            </div>
+    </div>
+   
+    
+</div>

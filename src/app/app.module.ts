@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignUpMasterModule } from './sign-up-master/sign-up-master.module';
+import { SignUpMasterComponent } from './sign-up-master/sign-up-master/sign-up-master.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SignUpMasterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
