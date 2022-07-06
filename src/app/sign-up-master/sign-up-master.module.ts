@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SignUpMasterComponent } from './sign-up-master/sign-up-master.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routeSignUpMaster : Routes = [
@@ -21,6 +22,7 @@ const routeSignUpMaster : Routes = [
   SignUpMasterComponent,SignInComponent
   ],
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routeSignUpMaster)
   ]

@@ -8,48 +8,48 @@
             <input class="form-check-input" type="radio" name="user-selection" id="user-staff" value="2" (click)="getform(2)">
             <label class="form-check-label" for="user-staff">Staff</label>
         </div>
-        <form  *ngIf="selectedForm == 1">
+        <form [formGroup]="myForm" *ngIf="selectedForm == 1" (ngSubmit)="onSubmitHODForm()">
             <div class="hod-form">
                 <div class="form-group">
                     <label for="hod-name">Name</label>
-                    <input type="email" class="form-control" id="hod-name" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="hod-name" aria-describedby="emailHelp" formControlName="name">
                 </div>
                 <div class="form-group">
                     <label for="hod-username">Username</label>
-                    <input type="email" class="form-control" id="hod-username" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="hod-username" aria-describedby="emailHelp" formControlName="userName">
                 </div>
                 <div class="form-group">
                     <label for="hod-department">Department</label>
-                    <input type="email" class="form-control" id="hod-department" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="hod-department" aria-describedby="emailHelp" formControlName="department">
                 </div>
                 <div class="form-group">
                     <label for="hod-email">Email address</label>
-                    <input type="email" class="form-control" id="hod-email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="hod-email" aria-describedby="emailHelp" formControlName="email">
                 </div>
                 <div class="form-group">
                     <label for="hod-password">Password</label>
-                    <input type="password" class="form-control" id="hod-password">
+                    <input type="password" class="form-control" id="hod-password" formControlName="password">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <form  *ngIf="selectedForm == 2">
+        <form [formGroup]="myForm"  *ngIf="selectedForm == 2" (ngSubmit)="onSubmitHODForm()">
             <div class="staff-form">
                 <div class="form-group">
                     <label for="staff-name">Name</label>
-                    <input type="email" class="form-control" id="staff-name" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="staff-name" aria-describedby="emailHelp" formControlName="name">
                 </div>
                 <div class="form-group">
                     <label for="staff-username">Username</label>
-                    <input type="email" class="form-control" id="staff-username" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="staff-username" aria-describedby="emailHelp" formControlName="userName">
                 </div>
                 <div class="form-group">
                     <label for="staff-email">Email address</label>
-                    <input type="email" class="form-control" id="staff-email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="staff-email" aria-describedby="emailHelp" formControlName="email">
                 </div>
                 <div class="form-group">
                     <label for="staff-password">Password</label>
-                    <input type="password" class="form-control" id="staff-password">
+                    <input type="password" class="form-control" id="staff-password" formControlName="password">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

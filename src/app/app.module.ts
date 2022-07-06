@@ -1,4 +1,6 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +15,9 @@ import { SignUpMasterComponent } from './sign-up-master/sign-up-master/sign-up-m
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SignUpMasterModule
+    SignUpMasterModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
