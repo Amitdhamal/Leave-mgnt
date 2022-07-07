@@ -7,10 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignUpMasterModule } from './sign-up-master/sign-up-master.module';
 import { SignUpMasterComponent } from './sign-up-master/sign-up-master/sign-up-master.component';
+import { HodDashboardComponent } from './userdashboard/hod-dashboard/hod-dashboard.component';
+import { StaffDashboardComponent } from './userdashboard/staff-dashboard/staff-dashboard.component';
+import { UserDashboardModule } from './userdashboard/user-dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -18,6 +21,7 @@ import { SignUpMasterComponent } from './sign-up-master/sign-up-master/sign-up-m
     SignUpMasterModule,
     ReactiveFormsModule,
     HttpClientModule,
+    UserDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

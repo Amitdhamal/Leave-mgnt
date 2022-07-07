@@ -1,15 +1,15 @@
 <div class="container col-sm-6 mt-5 card">
     <div class="card-body">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="user-selection" id="user-hod" value="1" (click)="getform(1)" checked>
-            <label class="form-check-label" for="user-hod">HOD</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="user-selection" id="user-staff" value="2" (click)="getform(2)">
-            <label class="form-check-label" for="user-staff">Staff</label>
-        </div>
-        <form [formGroup]="myForm" *ngIf="selectedForm == 1" (ngSubmit)="onSubmitHODForm()">
-            <div class="hod-form">
+        <form [formGroup]="mySignUpForm" (ngSubmit)="onSubmitHODForm()">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="userSelection" id="user-hod" value="1" (click)="selectedForm = 1" formControlName="userSelection" checked>
+                <label class="form-check-label" for="user-hod">HOD</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="userSelection" id="user-staff" formControlName="userSelection" value="2" (click)="selectedForm = 2">
+                <label class="form-check-label" for="user-staff">Staff</label>
+            </div>      
+            <div class="hod-form" *ngIf="selectedForm == 1">
                 <div class="form-group">
                     <label for="hod-name">Name</label>
                     <input type="email" class="form-control" id="hod-name" aria-describedby="emailHelp" formControlName="name">
@@ -31,10 +31,7 @@
                     <input type="password" class="form-control" id="hod-password" formControlName="password">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <form [formGroup]="myForm"  *ngIf="selectedForm == 2" (ngSubmit)="onSubmitHODForm()">
-            <div class="staff-form">
+            <div class="staff-form" *ngIf="selectedForm == 2" >
                 <div class="form-group">
                     <label for="staff-name">Name</label>
                     <input type="email" class="form-control" id="staff-name" aria-describedby="emailHelp" formControlName="name">

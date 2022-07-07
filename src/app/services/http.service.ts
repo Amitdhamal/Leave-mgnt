@@ -8,18 +8,23 @@ import { map } from 'rxjs';
 export class HttpService {
 
   constructor(private http : HttpClient) { }
-  Url = 'http://localhost:3000/'
-  postUser(selectedForm : Number,data:any){
-    if (selectedForm == 1){
-      return this.http.post<any>(this.Url+'hods',data) 
-    }
-    else{
-      return this.http.post<any>(this.Url+'staff',data)
-    }
-    
+  Urlhods = 'http://localhost:3000/hods'
+  Urlstaff = 'http://localhost:3000/staff'
+  
+
+  posthods(data: any){
+    return this.http.post<any>(this.Urlhods,data)
   }
 
-  get(){
-    return this.http.get(this.Url).pipe(map((res:any)=>{ return res}))
+  poststaff(data: any){
+    return this.http.post<any>(this.Urlstaff,data)
+  }
+
+  gethods(){
+    return this.http.get(this.Urlhods).pipe(map((res:any)=>{ return res}))
+  }
+
+  getstaff(){
+    return this.http.get(this.Urlstaff).pipe(map((res:any)=>{ return res}))
   }
 }

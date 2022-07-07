@@ -1,8 +1,43 @@
 {
   "hods": [
+    {
+      "name": "Gaurav Mahajan",
+      "userName": "gauravm",
+      "department": "Angular",
+      "email": "gaumahajan@gmail.com",
+      "userSelection": "1",
+      "password": "gaurav@123",
+      "id": 1
+    },
+    {
+      "name": "afasf",
+      "userName": "cvcv",
+      "department": "cbcb",
+      "email": "cbcb",
+      "password": "cbc",
+      "userSelection": "1",
+      "id": 2
+    }
   ],
   "staff": [
-    
+    {
+      "name": "Amit Dhamal",
+      "userName": "amitD",
+      "department": "UI",
+      "email": "amitdhamal6949@gmail.com",
+      "password": "amit@123",
+      "userSelection": "2",
+      "id": 1
+    },
+    {
+      "name": null,
+      "userName": null,
+      "department": null,
+      "email": null,
+      "password": null,
+      "userSelection": "2",
+      "id": 2
+    }
   ],
   "profile": {
     "name": "typicode"

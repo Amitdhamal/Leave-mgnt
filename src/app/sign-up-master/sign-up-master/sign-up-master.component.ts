@@ -10,37 +10,40 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class SignUpMasterComponent implements OnInit {
   selectedForm :Number = 1
-  myForm : any
+  mySignUpForm : any
   constructor(private router : Router,private http : HttpService) { }
 
   ngOnInit(): void {
-    this.myForm = new FormGroup({
+    this.mySignUpForm = new FormGroup({
       name : new FormControl(''),
       userName : new FormControl(''),
       department : new FormControl(''),
       email : new FormControl(''),
       password : new FormControl(''),
+      userSelection : new FormControl('')
     })
-    this.http.get().subscribe((data)=>{
-      console.log(data)
-    })
+    
   }
 
-  getform(formid : number){
-      this.selectedForm = formid
-  }
+ 
 
   navigateToSignIn(){
-  
-      this.router.navigate([''])
+    this.router.navigate([''])
   }
 
   onSubmitHODForm(){
+    if(this.selectedForm == 1){
+      this.http.posthods(this.mySignUpForm.value).subscribe(()=>{
+        console.log('data posted')
+      })
+    }
+    else{
+      this.http.poststaff(this.mySignUpForm.value).subscribe(()=>{
+        console.log('data posted')
+      })
+    }
     
-    this.http.postUser(this.selectedForm,this.myForm.value).subscribe(()=>{
-      console.log('data posted')
-    })
-    
+    this.mySignUpForm.reset()
    
   }
 }
