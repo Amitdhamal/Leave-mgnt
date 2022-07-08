@@ -1,1 +1,32 @@
-<p>hod-dashboard works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 my-3 font-weight-bold">
+            Dashboard
+        </div>
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let emp of staffArr, let i = index"> 
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.userName}}</td>
+                    <td>{{emp.email}}</td>
+                    <td class="text-center">
+                        <button class="btn btn-primary mr-3">View</button>
+                        <button class="btn btn-danger" (click)="deleteUser(emp)">delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

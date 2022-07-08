@@ -17,6 +17,24 @@
       "password": "cbc",
       "userSelection": "1",
       "id": 2
+    },
+    {
+      "name": "aa",
+      "userName": "cvcv",
+      "department": "cbcb",
+      "email": "aa",
+      "password": "aa",
+      "userSelection": "1",
+      "id": 3
+    },
+    {
+      "name": "asdf",
+      "userName": "",
+      "department": "",
+      "email": "",
+      "password": "",
+      "userSelection": "1",
+      "id": 4
     }
   ],
   "staff": [
@@ -28,15 +46,6 @@
       "password": "amit@123",
       "userSelection": "2",
       "id": 1
-    },
-    {
-      "name": null,
-      "userName": null,
-      "department": null,
-      "email": null,
-      "password": null,
-      "userSelection": "2",
-      "id": 2
     }
   ],
   "profile": {

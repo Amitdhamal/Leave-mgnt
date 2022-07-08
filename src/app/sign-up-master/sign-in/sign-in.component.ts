@@ -29,9 +29,6 @@ export class SignInComponent implements OnInit {
               console.log(info.userSelection)
               this.router.navigate(['dashboard/hod'])
             }
-          else{
-            alert('invaild cr edentials')
-          }
           return (info.email === this.mySignInForm.value.email && info.password === this.mySignInForm.value.password)
         })
       })
@@ -44,9 +41,6 @@ export class SignInComponent implements OnInit {
               console.log(info.userSelection)
               this.router.navigate(['dashboard/staff'])
             }
-          else{
-            alert('invaild cr edentials')
-          }
           return (info.email === this.mySignInForm.value.email && info.password === this.mySignInForm.value.password)
         })
       })

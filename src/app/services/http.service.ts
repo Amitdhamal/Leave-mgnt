@@ -20,6 +20,11 @@ export class HttpService {
     return this.http.post<any>(this.Urlstaff,data)
   }
 
+  deletestaff(id :number){
+    return this.http.delete<any>(this.Urlstaff+'/'+id)
+  
+  }
+
   gethods(){
     return this.http.get(this.Urlhods).pipe(map((res:any)=>{ return res}))
   }
