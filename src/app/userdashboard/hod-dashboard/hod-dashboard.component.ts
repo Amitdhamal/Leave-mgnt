@@ -26,8 +26,7 @@ export class HodDashboardComponent implements OnInit {
     this.httpServe.deletestaff(emp.id).subscribe(()=>{ 
       this.getstaff()
       alert('user has been deleted')
-     
-    })
+     })
     
   }
 
