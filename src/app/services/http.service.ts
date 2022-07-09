@@ -6,7 +6,7 @@ import { map } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-
+  selectedUser : any;
   constructor(private http : HttpClient) { }
   Urlhods = 'http://localhost:3000/hods'
   Urlstaff = 'http://localhost:3000/staff'
@@ -31,5 +31,14 @@ export class HttpService {
 
   getstaff(){
     return this.http.get(this.Urlstaff).pipe(map((res:any)=>{ return res}))
+  }
+  getUserDetail(empId : Number){
+   return this.http.get<any>(this.Urlstaff + '/' + empId).pipe(map((res:any)=>{ 
+    console.log(res)
+    this.selectedUser = res;
+    console.log(this.selectedUser)
+  }));
+   
+
   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 import { HodDashboardComponent } from './hod-dashboard/hod-dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 const routeDashboardpMaster : Routes = [
   {
@@ -10,6 +11,9 @@ const routeDashboardpMaster : Routes = [
   },
   {
     path:"staff",component : StaffDashboardComponent
+  },
+  {
+    path:"details",component : UserDetailComponent
   }
 
 ]
@@ -17,7 +21,8 @@ const routeDashboardpMaster : Routes = [
 @NgModule({
   declarations: [
     HodDashboardComponent,
-    StaffDashboardComponent
+    StaffDashboardComponent,
+    UserDetailComponent
   ],
   imports: [
     CommonModule,

@@ -37,16 +37,42 @@
       "id": 4
     }
   ],
-  "staff": [
-    {
-      "name": "Amit Dhamal",
-      "userName": "amitD",
-      "department": "UI",
-      "email": "amitdhamal6949@gmail.com",
-      "password": "amit@123",
-      "userSelection": "2",
+  "staff": [{
+    "name": "Amit",
+      "userName": "ab",
+      "department": "",
+      "email": "amit2022@gmail.com",
+      "password": "ab",
+      "userSelection": "1",
       "id": 1
-    }
+  },
+  {
+    "name": "gaurav",
+      "userName": "ab",
+      "department": "",
+      "email": "",
+      "password": "ab",
+      "userSelection": "1",
+      "id": 2
+  },
+  {
+    "name": "amit",
+      "userName": "ab",
+      "department": "",
+      "email": "",
+      "password": "ab",
+      "userSelection": "1",
+      "id": 3
+  },
+  {
+    "name": "rahul",
+      "userName": "ab",
+      "department": "",
+      "email": "",
+      "password": "ab",
+      "userSelection": "1",
+      "id": 4
+  }
   ],
   "profile": {
     "name": "typicode"
